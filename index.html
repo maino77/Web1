@@ -1,69 +1,40 @@
-<!doctype html>
-<html>
-<head>
-  <title>WEB1 - HTML</title>
-  <meta charset="utf-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="colors.js">
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>WEB1 - CSS</title>
+    <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./css/colors.js"></script>
+    <style>
+      .block{
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://tcpschool.com/webbasic/www" target="_blank" >WEB</a></h1>
+    <input type="button" class="block" value="night" onclick="
+    nightDayHandler(this); ">
+    <ol>
+      <li><a href="css/index.html" target="_blank">html</a></li>
+      <li><a href="css/2.html" target="_blank">css</a></li>
+      <li><a href="css/3.html" target="_blank">JavaScript</a></li>
+    </ol>
+        <h2 style="color : powderblue; background-color : coral;">CSS란 무엇인가?</h2>
+        <p><a href="https://ofcourse.kr/css-course/CSS-%EC%9E%85%EB%AC%B8" target="_blank">Cascading Style Sheets (CSS)</a></p>
+        <img src="css/CSS.jpg" width="20%" alt="CSS">
+        <p>HTML 입문 강의에서 HTML을 웹 사이트에서 화면에 표시되는 정보를 약속 한 것이라고 했는데요,
+          CSS는 구체적으로 어떤 스타일로 요소가 표시 되는지를 정하는 규격이라고 할 수 있습니다.</p>
+        <p>초기의 웹은 HTML 하나로 문서의 뼈대도 만들고 꾸미기도 함께 하였지만, 공통적인 디자인을 갖는 문서가 여럿 존재 할 경우 하나의 디자인이 변경되면 모든 파일을 수정해야 하는 등의 번거로움이 존재했죠.</p>
+        <p>CSS는 이런 문제를 해결함과 동시 웹페이지의 내용과 스타일(표현)을 분리해주어, 역할 분담도 되는 효과를 가지고 있습니다.</p>
 
-  </script>
-  <style>
-    .block{
-      width: 50px;
-    }
-  </style>
-     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <input type="button" class="block" value="night" onclick="
-  nightDayHandler(this); ">
-  <h1><a href="index.html" target="_blank">Web</a></h1>
-  <div id="grid">
-    <ol id="s">
-  <li><a href="index.html" target="_blank" class="saw">HTML</a></li>
-  <li><a href="2.html" target="_blank" class="saw">CSS</a></li>
-  <li><a href="3.html" target="_blank">JavaScript</a></li>
-</ol>
-<div>
-<h2>HTML이란 무엇인가?</h2>
+        <h2>사용법</h2>
+        <p>CSS 내부적으로 사용되는 문법은 동일하며, 어디에 기술하느냐의 차이가 존재합니다. 기술하는 방법은 아래의 3가지가 있습니다.</p>
+        <ol>
+          <li>HTML태그의 <strong>style 속성</strong>을 이용</li>
+          <li>style태그를 통해 HTML문서 내부에 기술</li>
+          <li>css파일로 분리하여 HTML문서에 연결</li>
+        </ol>
 
-<p><a href="https://www.w3.org/TR/html52/" target="_blank" title="html5 speicification">
-Hypertext markup Language (HTML)</a> is the standard mark up language
-for <strong>creating <u>web</u> pages</strong> and web applications.
-Web browsers receive HTML documents from a web server or from local
-storage and render them into multimedia web pages.</p>
-<img src="key.jpg" width="30%" alt="keyboard">
-<p style="margin-top:40px;">HTML describes the structure of a web page semantically and originally
-included cues for the appearance of the document. HTML elements are
-the building blocks of HTML pages. With HTML constructs, image
-and other objects, such as interactive forms, may be embedded into
-the rendered page. It provides a means to create structured documents
-by denoting structural semantics for text such as headings, paragraphs,
-lists, links, quotes and other items. HTML elements are delineated
-by tags written using angle brackets.</p>
-
-<p>
-  <div id="disqus_thread"></div>
-  <script>
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-      /*
-      var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      */
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-maino77-github-io-my-foodlist.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
-</div>
-</div>
-</body>
+  </body>
 </html>
