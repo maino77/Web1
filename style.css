@@ -1,0 +1,43 @@
+a {
+  text-decoration: none
+}
+a:link { color: blue;}
+a:visited{color: gray;}
+a:hover{color:green}
+a:active{color:red}
+h1{
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin: 0;
+  font-size: 45px;
+  padding:20px;
+}
+body{
+  margin:0;
+}
+#grid{
+  display:grid;
+  grid-template-columns:120px 1fr;
+}
+#s{
+  border-right: 1px solid black;
+  margin: 0;
+  padding:25px;
+}
+#grid div{
+  padding: 25px;
+}
+@media (max-width: 660px){
+#grid{
+  display:block;
+  }
+#s{
+    border-right: none;
+    text-align: center;
+    width: 100px;
+    margin: auto;
+  }
+  h1{
+        border-bottom: none;
+  }
+}
