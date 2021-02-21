@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WEB</h1>
+    <!--코드 변천사 1. 기초적 형태-->
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
+    <input id="night1" type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <!--코드 변천사 2. 두 버튼의 결합-->
+    <input id="bright" type="button" value="night" onclick="
+    if(document.querySelector('#bright').value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#bright').value = 'day';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#bright').value = 'night';
+    }">
+    <!--코드 변천사 3. 리팩토링 document.querySelector('#bright')중복 -> this, id의 필요성 사라짐.-->
+    <input type="button" value="night" onclick="
+    if(this.value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      this.value = 'day';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      this.value = 'night';
+    }">
+    <!--코드 변천사 4. 리팩토링 document.querySelector('body')중복 -> 함수로 묶어 지정-->
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body')
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+    }">
+    <!--코드 변천사 5. 하이퍼링크 배열, 반복문을 이용해 색 바꾸기
+      목적: 이후 a가 추가되더라도 night, day에 적용될 수 있게 하기 위해.-->
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body')
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i++;
+      }
+
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i++;
+      }
+    }">
+    <ol>
+      <li><a href="https://ofcourse.kr/html-course/HTML-%EC%9E%85%EB%AC%B8">html</a></li>
+      <li><a href="https://ofcourse.kr/css-course/CSS-%EC%9E%85%EB%AC%B8">CSS</a></li>
+      <li><a href="https://ofcourse.kr/js-course/JavaScript-%EC%9E%85%EB%AC%B8">JavaScript</a></li>
+    </ol>
+    <h2 style="background-color : coral; color : powderblue;" >css란 무엇인가?</h2>
+    <p><a href="https://ofcourse.kr/css-course/CSS-%EC%9E%85%EB%AC%B8">Cascading Style Sheets (CSS)</a><p>
+    <img src="css/css.jpg" width="30%">
+
+    <p>
+    HTML 입문 강의에서 HTML을 웹 사이트에서 화면에 표시되는 정보를 약속 한 것이라고 했는데요,
+    CSS는 구체적으로 어떤 스타일로 요소가 표시 되는지를 정하는 규격이라고 할 수 있습니다.
+    </p>
+
+
+    <p>
+    초기의 웹은 HTML 하나로 문서의 뼈대도 만들고 꾸미기도 함께 하였지만, 공통적인 디자인을 갖는 문서가
+     여럿 존재 할 경우 하나의 디자인이 변경되면 모든 파일을 수정해야 하는 등의 번거로움이 존재했죠.
+    </p>
+
+  </body>
+</html>
