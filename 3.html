@@ -3,15 +3,28 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="colors.js">
+
+</script>
+  <style>
+    .block{
+      width: 50px;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <input type="button" class="block" value="night" onclick="
+  nightDayHandler(this); ">
   <h1><a href="index.html" target="_blank">Web</a></h1>
-<ol>
+  <div id="grid">
+    <ol id="s">
   <li><a href="index.html" target="_blank">HTML</a></li>
   <li><a href="2.html" target="_blank">CSS</a></li>
   <li><a href="3.html" target="_blank">JavaScript</a></li>
 </ol>
-
+<div>
 <h2><a href="https://ofcourse.kr/js-course/JavaScript-%EC%9E%85%EB%AC%B8" target="_blank" title="JavaScript speicification">JavaScript란 무엇인가?</a></h2>
 <img src="js.png" width="30%" alt="js">
 <h3>개요</h3>
@@ -31,5 +44,7 @@
 <p>브라우저에서 즉시 해석되어 실행되는데, 한 곳에서 만든 엔진을 사용하지 않기 때문에
 브라우저마다 완전 동일한게 동작하다고 하기 어렵습니다.</p>
 <p>개발 속도가 빠르고 문법이 간단하지만, 복잡한 프로그램을 만들기는 어렵다는 특징이 있습니다.</p>
+</div>
+</div>
 </body>
 </html>
